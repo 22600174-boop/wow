@@ -171,45 +171,45 @@
         background-color: #7cb342;
       }
       .dropdown {
-  position: relative;
-  list-style: none;
-}
+        position: relative;
+        list-style: none;
+      }
 
-.menu-btn {
-  color: white;
-  text-decoration: none;
-  font-size: 1.2rem;
-}
+      .menu-btn {
+        color: white;
+        text-decoration: none;
+        font-size: 1.2rem;
+      }
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
 
-  background: white;
-  min-width: 180px;
+        background: white;
+        min-width: 180px;
 
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 
-  overflow: hidden;
-}
+        overflow: hidden;
+      }
 
-.dropdown-content a {
-  display: block;
-  padding: 12px 15px;
-  color: #333;
-  text-decoration: none;
-}
+      .dropdown-content a {
+        display: block;
+        padding: 12px 15px;
+        color: #333;
+        text-decoration: none;
+      }
 
-.dropdown-content a:hover {
-  background: #f5f5f5;
-}
+      .dropdown-content a:hover {
+        background: #f5f5f5;
+      }
 
-.dropdown:hover .dropdown-content {
-  display: block;
-}
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
     </style>
   </head>
   <body>
@@ -222,22 +222,22 @@
           <li><a href="index.html">home</a></li>
           <li class="dropdown">
             <a href="#">menu</a>
-           <div class="dropdown-content">
-  <a href="restaurant_korean.html">한식</a>
-  <a href="restaurant_chinese.html">중식</a>
-  <a href="restaurant_japanese.html">일식</a>
-  <a href="restaurant_western.html">양식</a>
-  <a href="restaurant_cafe.html">카페</a>
-</div>
+            <div class="dropdown-content">
+              <a href="restaurant_korean.html">한식</a>
+              <a href="restaurant_chinese.html">중식</a>
+              <a href="restaurant_japanese.html">일식</a>
+              <a href="restaurant_western.html">양식</a>
+              <a href="restaurant_cafe.html">카페</a>
+            </div>
           </li>
-         <li class="dropdown">
-  <a href="#">price</a>
-  <div class="dropdown-content">
-    <a href="price_1.html">💰 10,000</a>
-    <a href="price_2.html">💰💰 15,000</a>
-    <a href="price_3.html">💰💰💰 20,000</a>
-  </div>
-</li>
+          <li class="dropdown">
+            <a href="#">price</a>
+            <div class="dropdown-content">
+              <a href="price_1.html">💰 10,000</a>
+              <a href="price_2.html">💰💰 15,000</a>
+              <a href="price_3.html">💰💰💰 20,000</a>
+            </div>
+          </li>
           <li><a href="project.html">suggestion</a></li>
         </ul>
       </nav>
@@ -313,45 +313,8 @@
           <img src="cafe.jpg" alt="카페" />
           <a class="category-label" href="restaurant_cafe.html">카페</a>
         </div>
-      </main>
-    </div>
-
-   
-    
-
-    <script>
-      function showPage(page, category) {
-        // 모든 섹션 숨기기
-        document.getElementById("page-home").style.display = "none";
-        document.getElementById("page-restaurant").style.display = "none";
-        document.getElementById("page-rating").style.display = "none";
-        document.getElementById("page-suggestion").style.display = "none";
-
-        if (page === "home") {
-          document.getElementById("page-home").style.display = "block";
-        } else if (page === "restaurant") {
-          document.getElementById("page-restaurant").style.display = "block";
-          document.getElementById("restaurant-title").innerText =
-            category + " 추천 맛집";
-          document.getElementById("breadcrumb-category").innerText = category;
-
-          // 카테고리별 목록 표시
-          var lists = ["한식", "중식", "일식", "양식", "카페"];
-          for (var i = 0; i < lists.length; i++) {
-            var el = document.getElementById("list-" + lists[i]);
-            if (el) {
-              el.style.display = lists[i] === category ? "grid" : "none";
-            }
-          }
-        } else if (page === "rating") {
-          document.getElementById("page-rating").style.display = "block";
-        } else if (page === "suggestion") {
-          document.getElementById("page-suggestion").style.display = "block";
-        }
-        return false;
-      }
-    </script>
       </div>
+      <!-- category-grid -->
     </main>
   </body>
 </html>
