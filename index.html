@@ -188,11 +188,6 @@
               <a href="#" onclick="showPage('restaurant', '일식')">일식</a>
               <a href="#" onclick="showPage('restaurant', '양식')">양식</a>
               <a href="#" onclick="showPage('restaurant', '카페')">카페</a>
-              <a href="restaurant_korean.html">한식</a>
-              <a href="restaurant_chinese.html">중식</a>
-              <a href="restaurant_japanese.html">일식</a>
-              <a href="restaurant_western.html">베트남</a>
-              <a href="restaurant_cafe.html">카페</a>
             </div>
           </li>
           <li><a href="price.html">price</a></li>
@@ -242,92 +237,7 @@
         </div>
       </div>
 
-        <!-- 카테고리 -->
-        <div class="category-section">
-          <div class="category-grid">
-            <div class="category-card">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Dolsot-bibimbap.jpg/1280px-Dolsot-bibimbap.jpg"
-                alt="한식"
-              />
-              <a
-                class="category-label"
-                href="#"
-                onclick="showPage('restaurant', '한식')"
-                >한식</a
-              >
-            </div>
-
-            <div class="category-card">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Chinese_cuisine-Chow_mein-01.jpg/1280px-Chinese_cuisine-Chow_mein-01.jpg"
-                alt="중식"
-              />
-              <a
-                class="category-label"
-                href="#"
-                onclick="showPage('restaurant', '중식')"
-                >중식</a
-              >
-            </div>
-
-            <div class="category-card">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Sashimi_platter.jpg/1280px-Sashimi_platter.jpg"
-                alt="일식"
-              />
-              <a
-                class="category-label"
-                href="#"
-                onclick="showPage('restaurant', '일식')"
-                >일식</a
-              >
-            </div>
-
-            <div class="category-card">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Bowl_of_Pho.jpg/1280px-Bowl_of_Pho.jpg"
-                alt="양식"
-              />
-              <a
-                class="category-label"
-                href="#"
-                onclick="showPage('restaurant', '양식')"
-                >양식</a
-              >
-            </div>
-            <div class="category-card">
-              <img src="이미지주소" alt="카페" />
-              <a
-                class="category-label"
-                href="#"
-                onclick="showPage('restaurant', '카페')"
-                >카페</a
-              >
-            </div>
-          </div>
-        </div>
-      </main>
-    </div>
-
-    <!-- ===================== 맛집 목록 페이지 ===================== -->
-    <div id="page-restaurant" class="restaurant-section">
-      <main>
-        <div class="breadcrumb">
-          <a
-            href="#"
-            onclick="showPage('home')"
-            style="color: #7cb342; text-decoration: none"
-            >홈</a
-          >
-          &gt; <span id="breadcrumb-category">한식</span>
-        </div>
-        <h2 id="restaurant-title">한식 추천 맛집</h2>
-
-        <div class="filter-bar">
-          <span>전체</span>
-          <span>평점 높은 순</span>
-          <span>리뷰 많은 순</span>
+=======
       <!-- 카테고리 -->
       <div class="category-grid">
         <div class="category-card">
@@ -339,27 +249,18 @@
         </div>
 
         <div class="category-card">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Chinese_cuisine-Chow_mein-01.jpg/1280px-Chinese_cuisine-Chow_mein-01.jpg"
-            alt="중식"
-          />
+          <img src="중식.jpg" alt="중식" />
           <a class="category-label" href="restaurant_chinese.html">중식</a>
         </div>
 
         <div class="category-card">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Sashimi_platter.jpg/1280px-Sashimi_platter.jpg"
-            alt="일식"
-          />
+          <img src="일식.jpg" alt="일식" />
           <a class="category-label" href="restaurant_japanese.html">일식</a>
         </div>
 
         <div class="category-card">
-          <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Bowl_of_Pho.jpg/1280px-Bowl_of_Pho.jpg"
-            alt="베트남"
-          />
-          <a class="category-label" href="restaurant_western.html">베트남</a>
+          <img src="./gray.jpeg" alt="양식" />
+          <a class="category-label" href="restaurant_western.html">양식</a>
         </div>
 
         <div class="category-card">
@@ -369,81 +270,8 @@
       </main>
     </div>
 
-    <!-- ===================== 평점 페이지 ===================== -->
-    <div id="page-rating" class="rating-section">
-      <main>
-        <h2>⭐ 맛집 평점 남기기</h2>
-        <form name="ratingForm" method="get">
-          <fieldset>
-            <legend>평점 정보 입력</legend>
-            <div class="form-group">
-              <label>식당 이름</label>
-              <input
-                type="text"
-                size="30"
-                placeholder="식당 이름을 입력하세요"
-              />
-            </div>
-            <div class="form-group">
-              <label>닉네임</label>
-              <input type="text" size="20" placeholder="닉네임을 입력하세요" />
-            </div>
-            <div class="form-group">
-              <label>별점</label><br />
-              <input type="radio" name="star" value="5" /> ★★★★★ (5점)
-              <input type="radio" name="star" value="4" /> ★★★★☆ (4점)
-              <input type="radio" name="star" value="3" /> ★★★☆☆ (3점)
-              <input type="radio" name="star" value="2" /> ★★☆☆☆ (2점)
-              <input type="radio" name="star" value="1" /> ★☆☆☆☆ (1점)
-            </div>
-            <div class="form-group">
-              <label>리뷰</label><br />
-              <textarea
-                name="review"
-                placeholder="방문 후기를 남겨주세요..."
-              ></textarea>
-            </div>
-            <input type="submit" class="submit-btn" value="리뷰 등록" />
-          </fieldset>
-        </form>
-      </main>
-    </div>
-
-    <!-- ===================== 건의 페이지 ===================== -->
-    <div id="page-suggestion" class="suggestion-section">
-      <main>
-        <h2>💬 맛집 추가 건의하기</h2>
-        <form name="suggestionForm" method="get">
-          <fieldset>
-            <legend>추가 건의 정보</legend>
-            <div class="form-group">
-              <label>식당 이름</label>
-              <input type="text" size="30" placeholder="추천할 식당 이름" />
-            </div>
-            <div class="form-group">
-              <label>음식 종류</label><br />
-              <input type="radio" name="food_type" value="한식" /> 한식
-              <input type="radio" name="food_type" value="중식" /> 중식
-              <input type="radio" name="food_type" value="일식" /> 일식
-              <input type="radio" name="food_type" value="양식" /> 양식
-              <input type="radio" name="food_type" value="카페" /> 카페
-            </div>
-            <div class="form-group">
-              <label>주소</label>
-              <input type="text" size="40" placeholder="경북 포항시 북구 ..." />
-            </div>
-            <div class="form-group">
-              <label>추천 이유</label><br />
-              <textarea
-                name="reason"
-                placeholder="이 식당을 추천하는 이유를 알려주세요..."
-              ></textarea>
-            </div>
-            <input type="submit" class="submit-btn" value="건의 제출" />
-          </fieldset>
-        </form>
-      </main>
-    </div>
+   
+    
 
     <script>
       function showPage(page, category) {
