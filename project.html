@@ -1,1 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
 
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <header>
+    <div class="logo-area">
+      <span>🌶️🫑🧂</span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">home</a></li>
+        <li class="dropdown">
+          <a href="restaurant_korean.html">menu</a>
+          <div class="dropdown-content">
+            <a href="restaurant_korean.html">한식</a>
+            <a href="restaurant_chinese.html">중식</a>
+            <a href="restaurant_japanese.html">일식</a>
+            <a href="restaurant_western.html">양식</a>
+            <a href="restaurant_cafe.html">카페</a>
+          </div>
+        </li>
+        <li class="dropdown">
+          <a href="price_1.html">price</a>
+          <div class="dropdown-content">
+            <a href="price_1.html">💰 10,000</a>
+            <a href="price_2.html">💰💰 15,000</a>
+            <a href="price_3.html">💰💰💰 20,000</a>
+          </div>
+        </li>
+        <li><a href="project.html">suggestion</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <body>
+    <div id="page-suggestion" class="suggestion-section">
+      <main>
+        <h2>💬 맛집 추가 건의하기</h2>
+        <form name="suggestionForm" method="get">
+          <fieldset>
+            <legend>추가 건의 정보</legend>
+            <div class="form-group">
+              <label>식당 이름</label>
+              <input type="text" size="30" placeholder="추천할 식당 이름" />
+            </div>
+            <div class="form-group">
+              <label>음식 종류</label><br />
+              <input type="radio" name="food_type" value="한식" /> 한식
+              <input type="radio" name="food_type" value="중식" /> 중식
+              <input type="radio" name="food_type" value="일식" /> 일식
+              <input type="radio" name="food_type" value="기타" /> 기타
+            </div>
+            <div class="form-group">
+              <label>주소</label>
+              <input type="text" size="40" placeholder="경북 포항시 북구 ..." />
+            </div>
+            <div class="form-group">
+              <label>추천 이유</label><br />
+              <textarea
+                name="reason"
+                placeholder="이 식당을 추천하는 이유를 알려주세요..."
+              ></textarea>
+            </div>
+            <input type="submit" class="submit-btn" value="건의 제출" />
+          </fieldset>
+        </form>
+      </main>
+    </div>
+  </body>
+</html>
