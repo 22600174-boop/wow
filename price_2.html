@@ -1,123 +1,149 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>💰💰 보통 가격 맛집</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>💰💰 보통 가격 맛집</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo-area">
+        <span>🌶️🫑🧂</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">home</a></li>
+          <li class="dropdown">
+            <a href="restaurant_korean.html">menu</a>
+            <div class="dropdown-content">
+              <a href="restaurant_korean.html">한식</a>
+              <a href="restaurant_chinese.html">중식</a>
+              <a href="restaurant_japanese.html">일식</a>
+            </div>
+          </li>
+          <li><a href="rating.html">rating</a></li>
+          <li class="dropdown">
+            <a href="price_1.html">price</a>
+            <div class="dropdown-content">
+              <a href="price_1.html">💰 저렴해요</a>
+              <a href="price_2.html">💰💰 보통이에요</a>
+              <a href="price_3.html">💰💰💰 고급이에요</a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-<header>
-  <div class="logo-area">
-    <span>🌶️🫑🧂</span>
-  </div>
-  <nav>
-    <ul>
-      <li><a href="index.html">home</a></li>
-      <li class="dropdown">
-        <a href="restaurant_korean.html">menu</a>
-        <div class="dropdown-content">
-          <a href="restaurant_korean.html">한식</a>
-          <a href="restaurant_chinese.html">중식</a>
-          <a href="restaurant_japanese.html">일식</a>
-          <a href="restaurant_vietnam.html">베트남</a>
+    <main>
+      <div class="breadcrumb">
+        <a href="index.html">홈</a> &gt; 가격대별 맛집 &gt; 💰💰 보통이에요
+      </div>
+      <h2 class="page-title">💰💰 보통 가격 맛집 (1~2만원)</h2>
+
+      <div class="filter-bar">
+        <span>전체</span>
+        <span>평점 높은 순</span>
+        <span>리뷰 많은 순</span>
+      </div>
+
+      <div class="restaurant-grid">
+        <div class="restaurant-card">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Dolsot-bibimbap.jpg/1280px-Dolsot-bibimbap.jpg"
+            alt="어림지"
+          />
+          <div class="restaurant-info">
+            <span class="price-badge">💰💰 10,000~15,000원</span>
+            <h3>어림지</h3>
+            <p>대표메뉴: 찜닭, 뼈다귀전골</p>
+            <p><span style="color: #f4a900">★★★★</span>☆ 4.9 (리뷰 83)</p>
+            <a class="address" href="https://map.naver.com" target="_blank"
+              >📍 경북 포항시 북구 새천년대로 1308</a
+            >
+          </div>
         </div>
-      </li>
-      <li><a href="rating.html">rating</a></li>
-      <li class="dropdown">
-        <a href="price_1.html">price</a>
-        <div class="dropdown-content">
-          <a href="price_1.html">💰 저렴해요</a>
-          <a href="price_2.html">💰💰 보통이에요</a>
-          <a href="price_3.html">💰💰💰 고급이에요</a>
+
+        <div class="restaurant-card">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Chinese_cuisine-Chow_mein-01.jpg/1280px-Chinese_cuisine-Chow_mein-01.jpg"
+            alt="차이나타운"
+          />
+          <div class="restaurant-info">
+            <span class="price-badge">💰💰 12,000~18,000원</span>
+            <h3>차이나타운</h3>
+            <p>대표메뉴: 마라탕, 훠궈</p>
+            <p><span style="color: #f4a900">★★★★★</span> 4.8 (리뷰 220)</p>
+            <a class="address" href="https://map.naver.com" target="_blank"
+              >📍 경북 포항시 북구 양덕동 55</a
+            >
+          </div>
         </div>
-      </li>
-    </ul>
-  </nav>
-</header>
 
-<main>
-  <div class="breadcrumb">
-    <a href="index.html">홈</a> &gt; 가격대별 맛집 &gt; 💰💰 보통이에요
-  </div>
-  <h2 class="page-title">💰💰 보통 가격 맛집 (1~2만원)</h2>
+        <div class="restaurant-card">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Bowl_of_Pho.jpg/1280px-Bowl_of_Pho.jpg"
+            alt="베트남쌀국수"
+          />
+          <div class="restaurant-info">
+            <span class="price-badge">💰💰 10,000~14,000원</span>
+            <h3>베트남쌀국수 포항점</h3>
+            <p>대표메뉴: 소고기쌀국수, 분짜</p>
+            <p><span style="color: #f4a900">★★★★</span>☆ 4.7 (리뷰 75)</p>
+            <a class="address" href="https://map.naver.com" target="_blank"
+              >📍 경북 포항시 북구 장량동 201</a
+            >
+          </div>
+        </div>
 
-  <div class="filter-bar">
-    <span>전체</span>
-    <span>평점 높은 순</span>
-    <span>리뷰 많은 순</span>
-  </div>
+        <div class="restaurant-card">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Sashimi_platter.jpg/1280px-Sashimi_platter.jpg"
+            alt="하나라멘"
+          />
+          <div class="restaurant-info">
+            <span class="price-badge">💰💰 11,000~15,000원</span>
+            <h3>하나라멘</h3>
+            <p>대표메뉴: 돈코츠라멘, 간장라멘</p>
+            <p><span style="color: #f4a900">★★★★</span>☆ 4.6 (리뷰 67)</p>
+            <a class="address" href="https://map.naver.com" target="_blank"
+              >📍 경북 포항시 북구 용흥동 34</a
+            >
+          </div>
+        </div>
 
-  <div class="restaurant-grid">
+        <div class="restaurant-card">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Bowl_of_Pho.jpg/1280px-Bowl_of_Pho.jpg"
+            alt="사이공키친"
+          />
+          <div class="restaurant-info">
+            <span class="price-badge">💰💰 12,000~16,000원</span>
+            <h3>사이공 키친</h3>
+            <p>대표메뉴: 분보후에, 꾸어이짱</p>
+            <p><span style="color: #f4a900">★★★★★</span> 4.8 (리뷰 52)</p>
+            <a class="address" href="https://map.naver.com" target="_blank"
+              >📍 경북 포항시 북구 환호동 14</a
+            >
+          </div>
+        </div>
 
-    <div class="restaurant-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Dolsot-bibimbap.jpg/1280px-Dolsot-bibimbap.jpg" alt="어림지">
-      <div class="restaurant-info">
-        <span class="price-badge">💰💰 10,000~15,000원</span>
-        <h3>어림지</h3>
-        <p>대표메뉴: 찜닭, 뼈다귀전골</p>
-        <p><span style="color:#f4a900;">★★★★</span>☆ 4.9 (리뷰 83)</p>
-        <a class="address" href="https://map.naver.com" target="_blank">📍 경북 포항시 북구 새천년대로 1308</a>
+        <div class="restaurant-card">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Korean_fried_chicken_2.jpg/1280px-Korean_fried_chicken_2.jpg"
+            alt="금강산식당"
+          />
+          <div class="restaurant-info">
+            <span class="price-badge">💰💰 13,000~18,000원</span>
+            <h3>금강산식당</h3>
+            <p>대표메뉴: 보쌈, 수육</p>
+            <p><span style="color: #f4a900">★★★★</span>☆ 4.7 (리뷰 145)</p>
+            <a class="address" href="https://map.naver.com" target="_blank"
+              >📍 경북 포항시 북구 중앙로 123</a
+            >
+          </div>
+        </div>
       </div>
-    </div>
-
-    <div class="restaurant-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Chinese_cuisine-Chow_mein-01.jpg/1280px-Chinese_cuisine-Chow_mein-01.jpg" alt="차이나타운">
-      <div class="restaurant-info">
-        <span class="price-badge">💰💰 12,000~18,000원</span>
-        <h3>차이나타운</h3>
-        <p>대표메뉴: 마라탕, 훠궈</p>
-        <p><span style="color:#f4a900;">★★★★★</span> 4.8 (리뷰 220)</p>
-        <a class="address" href="https://map.naver.com" target="_blank">📍 경북 포항시 북구 양덕동 55</a>
-      </div>
-    </div>
-
-    <div class="restaurant-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Bowl_of_Pho.jpg/1280px-Bowl_of_Pho.jpg" alt="베트남쌀국수">
-      <div class="restaurant-info">
-        <span class="price-badge">💰💰 10,000~14,000원</span>
-        <h3>베트남쌀국수 포항점</h3>
-        <p>대표메뉴: 소고기쌀국수, 분짜</p>
-        <p><span style="color:#f4a900;">★★★★</span>☆ 4.7 (리뷰 75)</p>
-        <a class="address" href="https://map.naver.com" target="_blank">📍 경북 포항시 북구 장량동 201</a>
-      </div>
-    </div>
-
-    <div class="restaurant-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Sashimi_platter.jpg/1280px-Sashimi_platter.jpg" alt="하나라멘">
-      <div class="restaurant-info">
-        <span class="price-badge">💰💰 11,000~15,000원</span>
-        <h3>하나라멘</h3>
-        <p>대표메뉴: 돈코츠라멘, 간장라멘</p>
-        <p><span style="color:#f4a900;">★★★★</span>☆ 4.6 (리뷰 67)</p>
-        <a class="address" href="https://map.naver.com" target="_blank">📍 경북 포항시 북구 용흥동 34</a>
-      </div>
-    </div>
-
-    <div class="restaurant-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Bowl_of_Pho.jpg/1280px-Bowl_of_Pho.jpg" alt="사이공키친">
-      <div class="restaurant-info">
-        <span class="price-badge">💰💰 12,000~16,000원</span>
-        <h3>사이공 키친</h3>
-        <p>대표메뉴: 분보후에, 꾸어이짱</p>
-        <p><span style="color:#f4a900;">★★★★★</span> 4.8 (리뷰 52)</p>
-        <a class="address" href="https://map.naver.com" target="_blank">📍 경북 포항시 북구 환호동 14</a>
-      </div>
-    </div>
-
-    <div class="restaurant-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Korean_fried_chicken_2.jpg/1280px-Korean_fried_chicken_2.jpg" alt="금강산식당">
-      <div class="restaurant-info">
-        <span class="price-badge">💰💰 13,000~18,000원</span>
-        <h3>금강산식당</h3>
-        <p>대표메뉴: 보쌈, 수육</p>
-        <p><span style="color:#f4a900;">★★★★</span>☆ 4.7 (리뷰 145)</p>
-        <a class="address" href="https://map.naver.com" target="_blank">📍 경북 포항시 북구 중앙로 123</a>
-      </div>
-    </div>
-
-  </div>
-</main>
-</body>
+    </main>
+  </body>
 </html>
