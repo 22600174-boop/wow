@@ -349,7 +349,7 @@
               <a href="#" onclick="showPage('restaurant', '한식')">한식</a>
               <a href="#" onclick="showPage('restaurant', '중식')">중식</a>
               <a href="#" onclick="showPage('restaurant', '일식')">일식</a>
-              <a href="#" onclick="showPage('restaurant', '베트남')">베트남</a>
+              <a href="#" onclick="showPage('restaurant', '양식')">양식</a>
               <a href="#" onclick="showPage('restaurant', '카페')">카페</a>
             </div>
           </li>
@@ -448,13 +448,13 @@
             <div class="category-card">
               <img
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Bowl_of_Pho.jpg/1280px-Bowl_of_Pho.jpg"
-                alt="베트남"
+                alt="양식"
               />
               <a
                 class="category-label"
                 href="#"
-                onclick="showPage('restaurant', '베트남')"
-                >베트남</a
+                onclick="showPage('restaurant', '양식')"
+                >양식</a
               >
             </div>
             <div class="category-card">
@@ -786,8 +786,8 @@
               <input type="radio" name="food_type" value="한식" /> 한식
               <input type="radio" name="food_type" value="중식" /> 중식
               <input type="radio" name="food_type" value="일식" /> 일식
-              <input type="radio" name="food_type" value="베트남" /> 베트남
-              <input type="radio" name="food_type" value="기타" /> 기타
+              <input type="radio" name="food_type" value="양식" /> 양식
+              <input type="radio" name="food_type" value="카페" /> 카페
             </div>
             <div class="form-group">
               <label>주소</label>
@@ -823,7 +823,7 @@
           document.getElementById("breadcrumb-category").innerText = category;
 
           // 카테고리별 목록 표시
-          var lists = ["한식", "중식", "일식", "베트남"];
+          var lists = ["한식", "중식", "일식", "양식", "카페"];
           for (var i = 0; i < lists.length; i++) {
             var el = document.getElementById("list-" + lists[i]);
             if (el) {
