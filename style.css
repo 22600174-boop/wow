@@ -42,7 +42,9 @@ nav ul li a {
   font-size: 1.3em;
   padding: 6px 10px;
   border-radius: 4px;
-  transition: background-color 0.2s, color 0.2s;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
 }
 
 nav ul li a:hover {
@@ -66,7 +68,7 @@ nav ul li a:hover {
   border: 1px solid #c5e1a5;
   border-radius: 4px;
   z-index: 100;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
   white-space: nowrap;
 }
 
@@ -76,7 +78,9 @@ nav ul li a:hover {
   color: #333;
   text-decoration: none;
   font-size: 1em;
-  transition: background-color 0.15s, color 0.15s;
+  transition:
+    background-color 0.15s,
+    color 0.15s;
   border-radius: 0;
 }
 
@@ -223,11 +227,13 @@ main {
   border-radius: 8px;
   overflow: hidden;
   border: 1px solid #e0e0e0;
-  transition: box-shadow 0.2s, transform 0.2s;
+  transition:
+    box-shadow 0.2s,
+    transform 0.2s;
 }
 
 .restaurant-card:hover {
-  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
   transform: translateY(-3px);
 }
 
@@ -338,4 +344,8 @@ legend {
 
 .submit-btn:hover {
   background-color: #558b2f;
+}
+
+.restaurant-card {
+  cursor: pointer;
 }
