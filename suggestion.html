@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>맛집 추가 건의 완료</title>
+  <link rel="stylesheet" href="style.css"> 
+  <style>
+    /* 완료 페이지 전용 추가 스타일 */
+    .success-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* 화면 전체 높이에서 헤더 높이를 제외한 영역 확보 */
+      min-height: calc(100vh - 60px); 
+      /* 센터보다 살짝 위에 위치하도록 패딩 배치 */
+      padding-top: 15vh; 
+      box-sizing: border-box;
+    }
+
+    .success-box {
+      background-color: #ffffff;
+      border: 1px solid #c5e1a5;
+      border-radius: 8px;
+      padding: 40px 60px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      max-width: 500px;
+      width: 100%;
+    }
+
+    .success-message {
+      font-size: 2em;
+      font-weight: bold;
+      color: #333333;
+      margin-bottom: 24px;
+    }
+
+    .home-back-btn {
+      display: inline-block;
+      background-color: #8bc34a;
+      color: white;
+      text-decoration: none;
+      padding: 12px 35px;
+      font-size: 1.1em;
+      border-radius: 4px;
+      font-weight: bold;
+      transition: background-color 0.2s;
+    }
+
+    .home-back-btn:hover {
+      background-color: #558b2f;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo-area">
+      <span>🥕🌶️🧂</span>
+    </div>
+  </header>
+
+  <main class="success-container">
+    <div class="success-box">
+      <h1 class="success-message">제출되었습니다!</h1>
+      <p style="color: #666; margin-bottom: 30px; font-size: 0.95em;">
+        소중한 의견을 보내주셔서 감사합니다.<br>검토 후 빠른 시일 내에 반영하겠습니다.
+      </p>
+      <a href="index.html" class="home-back-btn">홈으로 돌아가기</a>
+    </div>
+  </main>
+
+</body>
+</html>
