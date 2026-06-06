@@ -6,6 +6,48 @@
     <title>맛집 추가 건의</title>
 
     <link rel="stylesheet" href="style.css" />
+    <style>
+      .custom-modal-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+        z-index: 9999;
+        justify-content: center;
+        align-items: center;
+      }
+      .custom-modal {
+        background-color: #ffffff;
+        padding: 30px 50px;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        text-align: center;
+        min-width: 320px;
+        border: 1px solid #c5e1a5;
+      }
+      .custom-modal-text {
+        font-size: 1.15em;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 20px;
+      }
+      .custom-modal-btn {
+        background-color: #8bc34a;
+        color: white;
+        border: none;
+        padding: 8px 24px;
+        font-size: 0.95em;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: bold;
+      }
+      .custom-modal-btn:hover {
+        background-color: #558b2f;
+      }
+    </style>
   </head>
 
   <body>
@@ -13,11 +55,9 @@
       <div class="logo-area">
         <span>🥕🌶️🧂</span>
       </div>
-
       <nav>
         <ul>
           <li><a href="index.html">home</a></li>
-
           <li class="dropdown">
             <a href="restaurant_korean.html">menu</a>
             <div class="dropdown-content">
@@ -28,7 +68,6 @@
               <a href="restaurant_cafe.html">카페</a>
             </div>
           </li>
-
           <li class="dropdown">
             <a href="price_1.html">price</a>
             <div class="dropdown-content">
@@ -37,7 +76,6 @@
               <a href="price_3.html">💰💰💰 20,000</a>
             </div>
           </li>
-
           <li><a href="project.html">suggestion</a></li>
         </ul>
       </nav>
@@ -48,80 +86,84 @@
         <h2>💬 맛집 추가 건의하기</h2>
         <br />
 
-        <form action="suggestion.html" method="get">
+        <form id="suggestionForm" onsubmit="return false;">
           <fieldset>
             <legend>추가 건의 정보</legend>
 
             <div class="form-group">
               <label>식당 이름</label>
-              <input
-                type="text"
-                size="30"
-                placeholder="추천할 식당 이름"
-                required
-              />
+              <input type="text" id="resName" size="30" placeholder="추천할 식당 이름" required />
             </div>
 
             <div class="form-group">
               <label>음식 종류</label><br />
-
-              <input type="radio" name="food_type" value="한식" required />
-              한식
-
-              <input type="radio" name="food_type" value="중식" />
-              중식
-
-              <input type="radio" name="food_type" value="일식" />
-              일식
-
-              <input type="radio" name="food_type" value="양식" />
-              양식
-
-              <input type="radio" name="food_type" value="카페" />
-              카페
+              <input type="radio" name="food_type" value="한식" required /> 한식
+              <input type="radio" name="food_type" value="중식" /> 중식
+              <input type="radio" name="food_type" value="일식" /> 일식
+              <input type="radio" name="food_type" value="양식" /> 양식
+              <input type="radio" name="food_type" value="카페" /> 카페
             </div>
 
             <div class="form-group">
               <label>주소</label>
-              <input
-                type="text"
-                size="40"
-                placeholder="경북 포항시 북구 ..."
-                required
-              />
+              <input type="text" id="resAddress" size="40" placeholder="경북 포항시 북구 ..." required />
             </div>
 
             <div class="form-group">
               <label>추천 이유</label><br />
               <textarea
+                id="resReason"
                 name="reason"
                 placeholder="이 식당을 추천하는 이유를 알려주세요..."
                 required
               ></textarea>
             </div>
 
-            <input type="button" class="submit-btn" value="건의 제출" />
+            <input type="submit" class="submit-btn" value="건의 제출" />
+
+            <!-- <div id="errorMessage" class="error-message">⚠️ 내용이 입력되지 않아 제출되지 않았습니다!</div> -->
           </fieldset>
         </form>
       </main>
     </div>
+
+    <div id="customModalOverlay" class="custom-modal-overlay">
+      <div class="custom-modal">
+        <div class="custom-modal-text">🎉 건의가 성공적으로 제출되었습니다!</div>
+        <button class="custom-modal-btn" onclick="location.reload()">확인</button>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
 
     <script>
-      document
-        .querySelector(".submit-btn")
-        .addEventListener("click", function () {
-          confetti({
-            particleCount: 200,
-            spread: 120,
-            origin: { y: 0.6 },
-          });
+      document.querySelector('.submit-btn').addEventListener('click', function (e) {
+        const form = document.getElementById('suggestionForm');
 
-          setTimeout(() => {
-            alert("🎉 건의가 성공적으로 제출되었습니다!");
-            location.reload();
-          }, 1000);
+        /* [핵심 수정] 브라우저가 자체적으로 1번 칸부터 순서대로 검사하게 만듭니다.
+      비어있는 첫 번째 칸을 발견하면 자동으로 그 칸 위치에 "화살표 말풍선"을 띄우고 멈춥니다.
+      1번을 채우고 다시 누르면 2번에 화살표를 띄우는 식으로 순서대로 작동합니다!
+    */
+        if (!form.reportValidity()) {
+          return; // 빈 칸이 있어서 화살표가 떴다면 폭죽 코드로 못 넘어가게 즉시 중단
+        }
+
+        // 모든 칸이 순서대로 통과되어 완벽하게 성공했을 때만 폭죽 실행!
+        confetti({
+          particleCount: 200,
+          spread: 120,
+          origin: { y: 0.6 },
         });
+
+        // 1초 뒤 정확히 화면 정중앙 성공 팝업창 노출
+        setTimeout(() => {
+          document.getElementById('customModalOverlay').style.display = 'flex';
+        }, 1000);
+      });
     </script>
   </body>
 </html>
