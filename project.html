@@ -100,14 +100,27 @@
               ></textarea>
             </div>
 
-            <input
-              type="submit"
-              class="submit-btn"
-              value="건의 제출"
-            />
+            <input type="button" class="submit-btn" value="건의 제출" />
           </fieldset>
         </form>
       </main>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+    <script>
+      document
+        .querySelector(".submit-btn")
+        .addEventListener("click", function () {
+          confetti({
+            particleCount: 200,
+            spread: 120,
+            origin: { y: 0.6 },
+          });
+
+          setTimeout(() => {
+            alert("🎉 건의가 성공적으로 제출되었습니다!");
+          }, 300);
+        });
+    </script>
   </body>
 </html>
